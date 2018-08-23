@@ -14,8 +14,8 @@ void test_image()
 	//cv::GaussianBlur(img_input, img_input, cv::Size(7, 7), 5, 3, cv::BORDER_CONSTANT);
 
 	LBP *lbp;
-	lbp = new OLBP;     // 0-255
-	//lbp = new ELBP;     // 0-255
+//    lbp = new OLBP;     // 0-255
+    lbp = new ELBP;     // 0-255
 	//lbp = new VARLBP;   // 0-953.0
 	//lbp = new CSLBP;    // 0-15
 	//lbp = new CSLDP;    // 0-15

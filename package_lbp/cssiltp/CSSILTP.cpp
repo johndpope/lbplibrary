@@ -42,8 +42,8 @@ namespace lbplibrary
     int nNeighbours = filterDim * filterDim - 1;
     int nWeights = numberOfWeights;
 
-    int filterRadius[2] = { floor((float)filterDim / 2),
-      floor((float)filterDim / 2) };
+    float halfFilterDim = floor((float)filterDim / 2);
+    int filterRadius[2] = { static_cast<int>(halfFilterDim),static_cast<int>(halfFilterDim) };
 
     // padd image with zeroes to deal with the edges
     cv::Mat paddedImage = gray;

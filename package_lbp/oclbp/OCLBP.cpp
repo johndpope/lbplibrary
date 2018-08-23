@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 #include <algorithm>
-
+#include <math.h>
 #include "OCLBP.h"
 
 namespace lbplibrary
@@ -220,7 +220,11 @@ namespace lbplibrary
 
     // Primitive pixelwise solution
     int filtDims[2] = { filtDimsX, filtDimsY };
-    int filtDimsR[2] = { floor((double)filtDimsX / 2), floor((double)filtDimsY / 2) };
+    float halfFiltDimsX = floor((double)filtDimsX / 2);
+    float halfFiltDimsY = floor((double)filtDimsX / 2);
+      
+    int filtDimsR[2] = { static_cast<int>(halfFiltDimsX),static_cast<int>(halfFiltDimsY) };
+      
 
     // padd image with zeroes to deal with the edges
     cv::Mat paddedImage = input;

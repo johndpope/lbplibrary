@@ -24,10 +24,7 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-if(${OpenCV_VERSION} VERSION_EQUAL 3 OR ${OpenCV_VERSION} VERSION_GREATER 3)
-  message (FATAL_ERROR "OpenCV version is not compatible: ${OpenCV_VERSION}")
-	message (FATAL_ERROR "Please use OpenCV 2.4.x version.")
-endif()
+
 
 file(GLOB sources histogram.cpp)
 file(GLOB main Main.cpp)

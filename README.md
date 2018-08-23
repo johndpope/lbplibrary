@@ -43,6 +43,11 @@ List of collaborators
 ---------------------
 [Andrews Sobral](https://github.com/andrewssobral) and [Cristina Lazar](https://plus.google.com/105844506452223448788).
 
+
+Build Xcode Project
+cmake -G Xcode -H. -B_build
+
+
 Example code
 ------------
 ```C++
